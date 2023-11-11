@@ -1,0 +1,18 @@
+@model mlnet_webapp.Models.Contacto
+
+@{
+    ViewData["Title"] = "Evaluate Modelo";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <form asp-controller="Home" asp-action="Evaluate">
+        <div class="form-group">
+            <label asp-for="Name">Frase:</label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Evaluate</button>
+    </form>
+    <h1>@ViewData["Message"]</h1>
+</div>
